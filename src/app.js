@@ -108,6 +108,19 @@ function readLocation() {
   }
 }
 
+function randomChain() {
+  $("random-chain-generate").addEventListener("click", function () {
+    const bitWidth = Number.parseInt(
+      document.getElementById("bit-width").value || 10,
+    );
+
+    for (let i = 0; i < bitWidth; i++) {
+      console.log(Math.floor(Math.random() * 2));
+    }
+  });
+}
+
+randomChain();
 function computationURL() {
   const url = new URL(location.href);
   url.search = new URLSearchParams({
